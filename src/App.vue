@@ -17,10 +17,12 @@ watch(search, () => {
 <template>
   <div class="container mx-auto pb-10">
     <header class="flex flex-col items-center gap-y-8 mt-5 mb-2">
-      <h1 class="text-winter-light text-5xl font-bold tracking-widest">
+      <h1
+        class="text-winter-light text-5xl font-secondary font-bold tracking-widest"
+      >
         Quiczy<span class="text-winter-tertiary font-normal">App</span>
       </h1>
-      <div class="searchbar relative w-[380px] bg-winter-light rounded-[5px]">
+      <div class="searchbar relative w-[380px] bg-winter-light rounded-full">
         <input
           v-model.trim="search"
           type="text"
