@@ -9,11 +9,11 @@ module.exports = {
     },
     extend: {
       colors: {
-        'theme-primary': '#fff740',
-        'theme-primary-light': '#feff9c',
-        'theme-secondary': '#7afcff',
-        'theme-tertiary': '#ff65a3',
-        'theme-tertiary-light': '#ff7eb9',
+        'winter-primary': '#a3c3d8',
+        'winter-secondary': '#456289',
+        'winter-tertiary': '#80a4c0',
+        'winter-dark': '#1d1b28',
+        'winter-light': '#d0e2eb',
       },
     },
     container: {
@@ -24,11 +24,11 @@ module.exports = {
       },
     },
     fontFamily: {
-      primary: ['Oswald, sans-serif'],
-      writing: ['Shantell Sans, cursive'],
+      primary: ['Ubuntu, sans-serif'],
+      secondary: ['Oswald, sans-serif'],
     },
     boxShadow: {
-      note: 'inset 0 -40px 40px rgba(0,0,0,0.05), inset 0 25px 10px rgba(0,0,0,0.03), 5px 5px 7px rgba(33,33,33,.08)',
+      card: '1px 1px 10px rgba(0,0,0,.1)',
     },
   },
   variants: {
