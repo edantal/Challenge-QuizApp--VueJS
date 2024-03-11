@@ -1,15 +1,22 @@
 <script setup>
 import { defineProps } from 'vue'
+import { useRouter } from 'vue-router'
 
+const router = useRouter()
 const { quiz } = defineProps(['quiz'])
 
-function getImageUrl(name, ext) {
+const navigateToQuiz = () => {
+  router.push(`/quiz/${quiz.id}`)
+}
+
+const getImageUrl = (name, ext) => {
   return new URL(`../assets/images/${name}.${ext}`, import.meta.url).href
 }
 </script>
 
 <template>
   <div
+    @click="navigateToQuiz"
     class="category__card w-[310px] overflow-hidden bg-winter-primary rounded-[2%] shadow-card cursor-pointer transition-all duration-500 ease-out hover:opacity-75"
   >
     <img
