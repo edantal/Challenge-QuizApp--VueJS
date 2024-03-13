@@ -1,7 +1,7 @@
 <script setup>
 import { defineProps, defineEmits } from 'vue'
 
-const emit = defineEmits('selectOption')
+const emit = defineEmits(['selectOption'])
 
 const { question } = defineProps(['question'])
 

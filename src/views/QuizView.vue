@@ -19,9 +19,11 @@ const showResults = ref(false)
 const status = computed(
   () => `${currentQuestionIndex.value}/${quiz.questions.length}`
 )
-const percentage = computed(
-  () =>
-    `${Math.round((currentQuestionIndex.value / quiz.questions.length) * 100)}%`
+const percentage = computed(() =>
+  Math.round((currentQuestionIndex.value / quiz.questions.length) * 100)
+)
+const percentageOfSuccess = computed(() =>
+  Math.round((numberCorrectAnswers.value / quiz.questions.length) * 100)
 )
 
 const onOptionSelected = (isCorrect) => {
@@ -31,7 +33,6 @@ const onOptionSelected = (isCorrect) => {
   if (quiz.questions.length - 1 === currentQuestionIndex.value) {
     showResults.value = true
   }
-
   currentQuestionIndex.value++
 }
 </script>
@@ -52,6 +53,7 @@ const onOptionSelected = (isCorrect) => {
       v-else
       :quizLength="quiz.questions.length"
       :correctAnswers="numberCorrectAnswers"
+      :percentage="percentageOfSuccess"
     />
   </div>
 </template>

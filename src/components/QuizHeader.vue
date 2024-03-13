@@ -16,7 +16,7 @@ const { status, percentage } = defineProps(['status', 'percentage'])
       <p
         class="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[calc(50%-1px)] text-winter-secondary text-xs leading-7"
       >
-        {{ percentage }}
+        {{ percentage }}%
       </p>
     </div>
     <h4 class="text-sm">Question {{ status }}</h4>
