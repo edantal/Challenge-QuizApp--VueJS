@@ -13,5 +13,5 @@ body {
 }
 
 .btn {
-  @apply px-3 py-2 mt-1.5 text-sm rounded-md border-none transition-all duration-500 ease-out cursor-pointer;
+  @apply px-3 py-2 mt-1.5 text-sm rounded-md transition-all duration-300 ease-out cursor-pointer;
 }
