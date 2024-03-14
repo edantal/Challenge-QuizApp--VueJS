@@ -1,6 +1,13 @@
 # QuizApp
 
-This template should help get you started developing with Vue 3 in Vite.
+Challenge App developed with Vue 3 in Vite and TailwindCSS
+
+### Resources
+
+- [Tailwind CSS](https://tailwindcss.com)
+- [Remix Icon](https://remixicon.com/)
+- [Google Fonts: Oswald](https://fonts.google.com/specimen/Oswald)
+- [Google Fonts: Ubuntu](https://fonts.google.com/specimen/Ubuntu)
 
 ## Recommended IDE Setup
 
