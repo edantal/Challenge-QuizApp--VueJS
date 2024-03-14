@@ -1,5 +1,5 @@
 <script setup>
-import { defineProps, watch } from 'vue'
+import { defineProps, computed } from 'vue'
 import { RouterLink } from 'vue-router'
 
 const { quizLength, correctAnswers, percentage } = defineProps([
@@ -7,21 +7,24 @@ const { quizLength, correctAnswers, percentage } = defineProps([
   'correctAnswers',
   'percentage',
 ])
+
+const getFeedback = computed(() => {
+  if (percentage < 30) {
+    return 'Awful performance.. Try Again :('
+  } else if (percentage >= 30 && percentage < 60) {
+    return 'Great Job! NOT! You can do better!'
+  } else if (percentage >= 60 && percentage < 95) {
+    return 'Good Job! Take a different quiz'
+  } else {
+    return 'Amazing! You aced it!'
+  }
+})
 </script>
 
 <template>
   <div class="results flex flex-col items-center justify-center gap-10">
     <div class="mt-[150px]">
-      <p v-if="percentage <= 30" class="text-sm">
-        Awful performance.. Try Again :(
-      </p>
-      <p v-else-if="percentage > 30 && percentage <= 60" class="text-sm">
-        Nice, but you can do better!
-      </p>
-      <p v-else-if="percentage > 60 && percentage <= 90" class="text-sm">
-        Good Job!
-      </p>
-      <p v-else class="text-sm">Amazing!</p>
+      <p class="text-sm">{{ getFeedback }}</p>
     </div>
 
     <div
@@ -41,7 +44,8 @@ const { quizLength, correctAnswers, percentage } = defineProps([
     <RouterLink
       to="/"
       class="btn bg-winter-secondary border-[1px] border-solid border-winter-secondary hover:text-winter-secondary hover:bg-winter-primary"
-      >To all Quizes</RouterLink
     >
+      To all Quizes
+    </RouterLink>
   </div>
 </template>
